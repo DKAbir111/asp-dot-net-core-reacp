@@ -1,7 +1,6 @@
 ﻿using System;
-using Microsoft.Extensions.Hosting;
 
-namespace BookApi.Models
+namespace BookStore.Data.Models
 {
 	public class Books
 	{
