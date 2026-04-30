@@ -15,14 +15,14 @@ namespace BookApi.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new List<string> { "Apple", "Banana" };
+            return new string[] { "Values 1", "Values 2" };
         }
 
 
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "This value is:" +id;
+            return "This value is:" +id;  
         }
     }
 }
