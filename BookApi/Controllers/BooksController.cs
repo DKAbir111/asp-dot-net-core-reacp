@@ -21,8 +21,8 @@ namespace BookApi.Controllers
 
 
         [HttpGet("{id}")]
-            public IActionResult GetBookById(int id )
-         {
+        public IActionResult GetBookById(int id)
+        {
             var book = books.GetBook(id);
             if (book == null)
             {
