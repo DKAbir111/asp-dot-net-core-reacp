@@ -1,37 +1,69 @@
-﻿using System;
-using BookStore.Data.Interfaces;
+﻿using BookStore.Data.Interfaces;
 using BookStore.Data.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace BookStore.Data.Repositories
 {
     public class BookRepository : IBookRepository
     {
-
-        public List<Books> books = new List<Books>
-{
-    new Books { Id = 1, Title = "Clean Code", Author = "Robert C. Martin", PublicationYear = 2008, IsAvaialable = true, CallNumber = "QA76.76.D47 C54" },
-    new Books { Id = 2, Title = "The Pragmatic Programmer", Author = "Andrew Hunt", PublicationYear = 1999, IsAvaialable = true, CallNumber = "QA76.6 H86" },
-    new Books { Id = 3, Title = "Introduction to Algorithms", Author = "Thomas H. Cormen", PublicationYear = 2009, IsAvaialable = false, CallNumber = "QA76.6 C66" },
-    new Books { Id = 4, Title = "Design Patterns", Author = "Erich Gamma", PublicationYear = 1994, IsAvaialable = true, CallNumber = "QA76.64 D47" },
-    new Books { Id = 5, Title = "Refactoring", Author = "Martin Fowler", PublicationYear = 2018, IsAvaialable = true, CallNumber = "QA76.76.R42 F69" },
-    new Books { Id = 6, Title = "You Don't Know JS", Author = "Kyle Simpson", PublicationYear = 2015, IsAvaialable = false, CallNumber = "QA76.73.J38 S56" },
-    new Books { Id = 7, Title = "C# in Depth", Author = "Jon Skeet", PublicationYear = 2019, IsAvaialable = true, CallNumber = "QA76.73.C154 S54" },
-    new Books { Id = 8, Title = "ASP.NET Core in Action", Author = "Andrew Lock", PublicationYear = 2018, IsAvaialable = true, CallNumber = "QA76.76.A65 L63" },
-    new Books { Id = 9, Title = "Head First Design Patterns", Author = "Eric Freeman", PublicationYear = 2004, IsAvaialable = false, CallNumber = "QA76.64 F74" },
-    new Books { Id = 10, Title = "The Clean Coder", Author = "Robert C. Martin", PublicationYear = 2011, IsAvaialable = true, CallNumber = "QA76.76.D47 C53" }
+        public List<Book> books = new List<Book>() {
+new Book { Id = 1, Title = "The Girl on the Train", Author = "Hawkins, Paula", PublicationYear = 2015, CallNumber = "F HAWKI"},
+new Book { Id = 2, Title = "Rogue Lawyer", Author = "Grisham, John", PublicationYear = 2015, CallNumber = "F GRISH"},
+new Book { Id = 3, Title = "After You", Author = "Moyes, Jojo", PublicationYear = 2015, CallNumber = "F MOYES"},
+new Book { Id = 4, Title = "All the Light We Cannot See", Author = "Doerr, Anthony", PublicationYear = 2014, CallNumber = "F DOERR"},
+new Book { Id = 5, Title = "The Girls", Author = "Cline, Emma", PublicationYear = 2016, CallNumber = "F CLINE"},
+new Book { Id = 6, Title = "The Martian", Author = "Weir, Andy", PublicationYear = 2011, CallNumber = "SF WEIR"},
+new Book { Id = 7, Title = "Me Before You", Author = "Moyes, Jojo", PublicationYear = 2012, CallNumber = "F MOYES"},
+new Book { Id = 8, Title = "Alexander Hamilton", Author = "Chernow, Ron", PublicationYear = 2004, CallNumber = "B HAMILTO A"},
+new Book { Id = 9, Title = "Before the Fall", Author = "Hawley, Noah", PublicationYear = 2016, CallNumber = "F HAWLE"}
 };
 
-        public Books? GetBook(int id)
+        public Book AddCost(int id, Cost cost)
         {
-            var book = books.FirstOrDefault(b => b.Id == id);
-            return book; // can be null
+            throw new NotImplementedException();
         }
 
-        public List<Books> GetBooks()
+        public bool AddNewBook(Book book)
         {
+            throw new NotImplementedException();
+        }
 
+        public List<Book> GetAllBooks()
+        {
             return books;
+        }
+
+        public string GetAuthorById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Book GetBook(int id)
+        {
+            return books.FirstOrDefault(x => x.Id == id);
+        }
+
+        public Book GetBookByAuthorAndYear(string author, int year)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Book> GetBooksByAuthor(string name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Remove(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Book> UpdateBook(int id, Book book)
+        {
+            throw new NotImplementedException();
         }
     }
 }
-
