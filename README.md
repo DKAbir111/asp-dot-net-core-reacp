@@ -126,7 +126,7 @@ This learning experience made complex backend concepts much easier to understand
 
 ## 📬 Final Note
 
-This is just the beginning of my backend development journey. I will continue learning, building, and improving every day.
+This is just the beginning of my dotnet development journey. I will continue learning, building, and improving every day.
 
 ---
 
